@@ -61,7 +61,7 @@ if presse:
                 }])
                 
                 # Lecture et ajout
-                existing_data = conn.read(worksheet="Feuille1")
+                existing_data = conn.read(worksheet="Log")
                 updated_df = pd.concat([existing_data, nouvelle_ligne], ignore_index=True)
                 conn.update(worksheet="Feuille1", data=updated_df)
                 
